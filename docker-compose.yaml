@@ -10,5 +10,6 @@ services:
     image: tomcat:alpine
     volumes:
       - war-files:/usr/local/tomcat/webapps/hello-1.0.war
+    ports: '8080:8080'
 volumes:
   war-files:
