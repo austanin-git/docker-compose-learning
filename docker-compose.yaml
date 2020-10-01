@@ -1,16 +1,16 @@
-version: '3'
+version: '3.8'
 services:
-    maven:
-        build:
-            dockerfile: Dockerfile
-            context: ./maven
-        volumes:
-            - type: bind
-              source: ./war-files
-              target: /app/boxfuse-sample-java-war-hello
-    tomcat:
-        image: tomcat:alpine
-        volumes:
-            - type: bind
-              source: ./war-files
-              target: /usr/local/tomcat/webapps/hello-1.0.war
+  maven:
+    build:
+      dockerfile: Dockerfile
+      context: ./maven
+    volumes:
+      - type: bind
+        source: ./war-files
+        target: /app/boxfuse-sample-java-war-hello
+  tomcat:
+    image: tomcat:alpine
+    volumes:
+      - type: bind
+        source: ./war-files
+        target: /usr/local/tomcat/webapps/hello-1.0.war
