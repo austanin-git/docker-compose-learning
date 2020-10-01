@@ -5,12 +5,8 @@ services:
       dockerfile: Dockerfile
       context: ./maven
     volumes:
-      - type: volume
-        source: ./war-files
-        target: /app/boxfuse-sample-java-war-hello
+      - war-files:/app/boxfuse-sample-java-war-hello
   tomcat:
     image: tomcat:alpine
     volumes:
-      - type: volume
-        source: ./war-files
-        target: /usr/local/tomcat/webapps/hello-1.0.war
+      - war-files:/usr/local/tomcat/webapps/hello-1.0.war
