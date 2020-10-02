@@ -12,6 +12,8 @@ WORKDIR /app/boxfuse-sample-java-war-hell
 
 WORKDIR /app/boxfuse-sample-java-war-hello
 
+# Maven package
+
 RUN mvn package -am -Dmaven.test.skip -T 1C
 
 
