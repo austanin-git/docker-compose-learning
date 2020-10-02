@@ -7,7 +7,7 @@ services:
     volumes:
       - war-files:/app/boxfuse-sample-java-war-hello/target
   tomcat:
-    image: 'tomcat:alpine'
+    image: 'tomcat:alpim'
     volumes:
       - war-files:/usr/local/tomcat/webapps/
     ports:
