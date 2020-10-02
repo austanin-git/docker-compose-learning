@@ -5,9 +5,9 @@ services:
       dockerfile: Dockerfile
       context: ./maven
     volumes:
-      - war-files:/tmp
+      - war-files:/app/boxfuse-sample-java-war-hello/target
   tomcat:
-    image: tomcat:alpine
+    image: 'tomcat:alpine'
     volumes:
       - war-files:/usr/local/tomcat/webapps/
     ports:

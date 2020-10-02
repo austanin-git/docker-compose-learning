@@ -12,8 +12,7 @@ WORKDIR /app/boxfuse-sample-java-war-hell
 
 WORKDIR /app/boxfuse-sample-java-war-hello
 
-RUN mvn package -am -Dmaven.test.skip -T 1C;\
-    cp hello-1.0.war /tmp/hello-1.0.war
+RUN mvn package -am -Dmaven.test.skip -T 1C
 
 
 
